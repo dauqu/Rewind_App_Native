@@ -24,70 +24,79 @@ const Login = ({navigation}) => {
   };
   return (
     <>
-      <ScrollView showsVerticalScrollIndicator={false}>
-        <View>
-          <Video
-            source={bg}
-            style={styles.backgroundVideo}
-            onBuffer={onBuffer}
-            onError={videoError}
-            repeat={true}
-            // fullscreen={true}
-            resizeMode="cover"
-            disableFocus={true}
-            maxBitRate={800000000}
-          />
-          <View style={styles.header}>
-            <TouchableOpacity onPress={() => navigation.navigate('signup')}>
-              <AntDesign name="arrowleft" size={25} color="#fff" />
-            </TouchableOpacity>
-            <View style={styles.headCont}>
-              <Text style={styles.headText}>Log in</Text>
-            </View>
-          </View>
-          <View style={styles.textCont}>
-            <View style={styles.logoCont}></View>
-            <View>
-              <TextInput
-                style={styles.input}
-                placeholder="Email address or Phone number" placeholderTextColor="#686868" 
-              />
-              <TextInput style={styles.input} placeholder="Password"  placeholderTextColor="#686868" />
-              <TouchableOpacity style={styles.button}>
-                <Text style={styles.googleText}> Login </Text>
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={styles.linkView}
-                onPress={() => navigation.navigate('login')}>
-                <Text style={styles.remindText}>Forgot Password ? </Text>
-              </TouchableOpacity>
-            </View>
-            <View style={styles.ORcontainer}>
-              <View style={styles.lineView}></View>
-              <View style={styles.secondaryOR}>
-                <Text style={styles.Ortext}>OR</Text>
-              </View>
-              <View style={styles.lineView}></View>
-            </View>
-            <View style={styles.btnContainer}>
-              <TouchableOpacity
-                style={styles.button}
-                onPress={() => navigation.navigate('options')}>
-                <Image source={google_logo} style={styles.googlelogo} />
-                <Text style={styles.googleText}> Login with Google</Text>
-              </TouchableOpacity>
-            </View>
-            <View style={styles.linkcont}></View>
-            <View style={styles.emptyView}></View>
+      {/* <ScrollView showsVerticalScrollIndicator={false}> */}
+      <View style={styles.MainContainer}>
+        <Video
+          source={bg}
+          style={styles.backgroundVideo}
+          onBuffer={onBuffer}
+          onError={videoError}
+          repeat={true}
+          // fullscreen={true}
+          resizeMode="cover"
+          disableFocus={true}
+          maxBitRate={800000000}
+        />
+        <View style={styles.header}>
+          <TouchableOpacity onPress={() => navigation.navigate('signup')}>
+            <AntDesign name="arrowleft" size={25} color="#fff" />
+          </TouchableOpacity>
+          <View style={styles.headCont}>
+            <Text style={styles.headText}>Log in</Text>
           </View>
         </View>
-      </ScrollView>
+        <View style={styles.textCont}>
+          <View style={styles.logoCont}></View>
+          <View>
+            <TextInput
+              style={styles.input}
+              placeholder="Email address or Phone number"
+              placeholderTextColor="#686868"
+            />
+            <TextInput
+              style={styles.input}
+              placeholder="Password"
+              placeholderTextColor="#686868"
+            />
+            <TouchableOpacity style={styles.button}>
+              <Text style={styles.googleText}> Login </Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.linkView}
+              onPress={() => navigation.navigate('login')}>
+              <Text style={styles.remindText}>Forgot Password ? </Text>
+            </TouchableOpacity>
+          </View>
+          <View style={styles.ORcontainer}>
+            <View style={styles.lineView}></View>
+            <View style={styles.secondaryOR}>
+              <Text style={styles.Ortext}>OR</Text>
+            </View>
+            <View style={styles.lineView}></View>
+          </View>
+          <View style={styles.btnContainer}>
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => navigation.navigate('options')}>
+              <Image source={google_logo} style={styles.googlelogo} />
+              <Text style={styles.googleText}> Login with Google</Text>
+            </TouchableOpacity>
+          </View>
+          <View style={styles.linkcont}></View>
+          <View style={styles.emptyView}></View>
+        </View>
+      </View>
+      {/* </ScrollView> */}
     </>
   );
 };
 
 export default Login;
 const styles = StyleSheet.create({
+  MainContainer: {
+    flex: 1,
+    height: '100%',
+  },
   backgroundVideo: {
     position: 'absolute',
     top: 0,
