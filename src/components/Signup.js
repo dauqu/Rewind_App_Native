@@ -41,9 +41,9 @@ const Signup = ({navigation}) => {
           <View>
             <TextInput
               style={styles.input}
-              placeholder="Email address or Phone number"
+              placeholder="Email address or Phone number" placeholderTextColor="#686868" 
             />
-            <TextInput style={styles.input} placeholder="Password" />
+            <TextInput style={styles.input} placeholder="Password" placeholderTextColor="#686868" />
             <View style={styles.SignupBtnContainer}>
               <TouchableOpacity style={styles.button}>
                 {/* <Image source={google_logo} style={styles.googlelogo} /> */}

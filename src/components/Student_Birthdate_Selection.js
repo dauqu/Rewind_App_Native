@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import React, {useState} from 'react';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-const cake = require('../assets/images/cake_img.png');
+const cake = require('../assets/images/bgcake.png');
 import DatePicker from 'react-native-neat-date-picker';
 
 const Student_Birthdate_Selection = ({navigation}) => {
@@ -50,8 +50,12 @@ const Student_Birthdate_Selection = ({navigation}) => {
           </TouchableOpacity>
         </View>
         <View>
-          <View>
+          <View style={styles.imgCont}>
             <Image source={cake} style={styles.cake} />
+          </View>
+          <View style={styles.infocont}>
+            <Text style={styles.infotext}>When is your birthday</Text>
+            <Text style={styles.infotextlower}>No one else will see this information</Text>
           </View>
           <View style={styles.NameCont}>
             <Text style={styles.nameHead}>Name</Text>
@@ -102,6 +106,37 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     padding: 3,
+  },
+  imgCont: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    alignSelf: 'center',
+    width: '80%',
+    height: 220,
+  },
+  cake: {
+    width: 150,
+    height: 150,
+  },
+  infocont: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    alignSelf: 'center',
+    padding: 20,
+  },
+  infotext: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: 'black',
+    letterSpacing: 1,
+  },
+  infotextlower:{
+    fontSize: 16,
+    color: 'gray',
+    letterSpacing: 1,
+    paddingBottom: 10,
+    fontWeight: 'bold',
+    marginTop: 10,
   },
   NameCont: {
     padding: 20,

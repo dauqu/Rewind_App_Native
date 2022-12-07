@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 const role = require('../assets/images/role.png');
 const role2 = require('../assets/images/role2.png');
+const userbg = require('../assets/images/usergif.png');
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import Entypo from 'react-native-vector-icons/Entypo';
@@ -23,8 +24,14 @@ const Options = ({navigation}) => {
           <AntDesign name="arrowleft" size={25} color="black" />
         </TouchableOpacity>
       </View>
-      <View>
-        <Image source={role2} style={styles.role} />
+      <View style={styles.ImgCont}>
+        <Image source={userbg} style={styles.role} />
+      </View>
+      <View style={styles.InfoCont}>
+        <Text style={styles.uprtext}>Tell us about yourself</Text>
+        <Text style={styles.lowertext}>
+          What is your role in the organization ?
+        </Text>
       </View>
       <View style={styles.optionBtn}>
         <TouchableOpacity
@@ -87,6 +94,36 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     padding: 3,
+  },
+  ImgCont: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '80%',
+    alignSelf: 'center',
+    height: 350,
+  },
+  role: {
+    width: 200,
+    height: 200,
+    resizeMode: 'contain',
+  },
+  InfoCont: {
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  uprtext: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: 'black',
+    letterSpacing: 1,
+    paddingBottom: 10,
+  },
+  lowertext:{
+    fontSize: 16,
+    color: 'gray',
+    letterSpacing: 1,
+    paddingBottom: 10,
+    fontWeight: 'bold',
   },
   optionBtn: {
     backgroundColor: '#fff',

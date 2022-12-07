@@ -50,9 +50,9 @@ const Login = ({navigation}) => {
             <View>
               <TextInput
                 style={styles.input}
-                placeholder="Email address or Phone number"
+                placeholder="Email address or Phone number" placeholderTextColor="#686868" 
               />
-              <TextInput style={styles.input} placeholder="Password" />
+              <TextInput style={styles.input} placeholder="Password"  placeholderTextColor="#686868" />
               <TouchableOpacity style={styles.button}>
                 <Text style={styles.googleText}> Login </Text>
               </TouchableOpacity>
