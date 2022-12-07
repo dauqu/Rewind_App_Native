@@ -31,7 +31,7 @@ const Search_For_Class = ({navigation}) => {
           color="black"
           style={styles.searchicon}
         />
-        <TextInput style={styles.input} placeholder="search for a school" />
+        <TextInput style={styles.input} placeholder="search for a school"  placeholderTextColor="#454545" />
       </View>
       <View style={styles.imgcont}>
         <Image source={school} style={styles.schoolimg} />

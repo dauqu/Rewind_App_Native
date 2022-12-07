@@ -26,7 +26,7 @@ const Create_Class_Login = ({navigation}) => {
         <TextInput
           style={styles.input}
           placeholder="e.g Math 101, Soccer Team"
-          placeholderTextColor="black"
+          placeholderTextColor="#454545"
         />
       </View>
       <View style={styles.NewButton}>

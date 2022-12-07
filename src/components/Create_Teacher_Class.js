@@ -35,8 +35,13 @@ const Create_Teacher_Class = ({navigation}) => {
           placeholder="e.g Math 101, Soccer Team"
         />
       </View>
+      <View style={styles.btncont}>
+        <TouchableOpacity style={styles.Btn}>
+          <Text style={styles.btntxt}>Create</Text>
+        </TouchableOpacity>
+      </View>
       <View style={styles.linkView}>
-        <Text>Looking for a class ?</Text>
+        <Text style={{color: '#454545'}}>Looking for a class ?</Text>
         <TouchableOpacity onPress={() => navigation.navigate('joinclass')}>
           <Text style={styles.Linktext}>Join a class</Text>
         </TouchableOpacity>
@@ -81,6 +86,26 @@ const styles = StyleSheet.create({
     borderWidth: 0.8,
     fontSize: 17,
     padding: 10,
+  },
+  btncont:{
+    marginTop: 20,
+    alignSelf: 'center',
+
+
+  },
+  Btn:{
+    borderWidth: 1,
+    padding: 4,
+    borderRadius: 5,
+    width: 100,
+    alignItems: 'center',
+    borderColor: '#efa423',
+  },
+  btntxt:{
+    color: '#efa423',
+    fontSize: 15,
+    textAlign: 'center',
+
   },
   linkView: {
     marginTop: 30,

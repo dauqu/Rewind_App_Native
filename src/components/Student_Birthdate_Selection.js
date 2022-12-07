@@ -55,16 +55,15 @@ const Student_Birthdate_Selection = ({navigation}) => {
           </View>
           <View style={styles.infocont}>
             <Text style={styles.infotext}>When is your birthday</Text>
-            <Text style={styles.infotextlower}>No one else will see this information</Text>
+            <Text style={styles.infotextlower}>
+              No one else will see this information
+            </Text>
           </View>
           <View style={styles.NameCont}>
             <Text style={styles.nameHead}>Name</Text>
-            <TextInput placeholder="Enter Name" style={styles.txtinput} />
+            <TextInput placeholder="Enter Name" placeholderTextColor="#454545" style={styles.txtinput} />
           </View>
-          <View style={styles.NameCont}>
-            <Text style={styles.nameHead}>Age</Text>
-            <TextInput placeholder="Enter Age" style={styles.txtinput} />
-          </View>
+
           <View style={styles.NameCont}>
             <View style={styles.CalendarCont}>
               <Text style={styles.nameHead}>D.O.B</Text>
@@ -99,7 +98,7 @@ export default Student_Birthdate_Selection;
 
 const styles = StyleSheet.create({
   MainCont: {
-    // backgroundColor: '#f6f6f6',
+    backgroundColor: '#fff',
     height: '100%',
   },
   header: {
@@ -130,7 +129,7 @@ const styles = StyleSheet.create({
     color: 'black',
     letterSpacing: 1,
   },
-  infotextlower:{
+  infotextlower: {
     fontSize: 16,
     color: 'gray',
     letterSpacing: 1,
@@ -144,6 +143,7 @@ const styles = StyleSheet.create({
   nameHead: {
     fontSize: 20,
     fontWeight: 'bold',
+    color: '#454545',
   },
   CalendarCont: {
     flexDirection: 'row',

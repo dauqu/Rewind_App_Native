@@ -33,7 +33,12 @@ const Join_Class = ({navigation}) => {
         </View>
       </View>
       <View style={styles.ipCont}>
-        <TextInput style={styles.input} placeholder="@" />
+        <TextInput style={styles.input} placeholder=" @ Code "  placeholderTextColor="#454545"/>
+      </View>
+      <View style={styles.btncont}>
+        <TouchableOpacity style={styles.Btn}>
+          <Text style={styles.btntxt}>Join</Text>
+        </TouchableOpacity>
       </View>
       <View style={styles.linkView}>
         <TouchableOpacity
@@ -101,6 +106,23 @@ const styles = StyleSheet.create({
     borderWidth: 0.8,
     fontSize: 17,
     padding: 10,
+  },
+  btncont: {
+    marginTop: 20,
+    alignSelf: 'center',
+  },
+  Btn: {
+    borderWidth: 1,
+    padding: 4,
+    borderRadius: 5,
+    width: 100,
+    alignItems: 'center',
+    borderColor: 'green',
+  },
+  btntxt: {
+    color: 'green',
+    fontSize: 15,
+    textAlign: 'center',
   },
   linkView: {
     marginTop: 30,

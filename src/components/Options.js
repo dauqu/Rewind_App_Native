@@ -139,6 +139,7 @@ const styles = StyleSheet.create({
   optionText: {
     fontSize: 20,
     textAlign: 'left',
+    color: '#454545',
   },
   icon: {
     width: 40,
